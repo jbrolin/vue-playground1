@@ -7,5 +7,6 @@ The parts that is included is:
 - button on click function
 - bind a css class
 - a simple link
+- add two numbers
 - how to freeze further updates to page
  

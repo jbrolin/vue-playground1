@@ -13,7 +13,7 @@
 
   <body>
     <div id="app">
-      <h1>Inköpslista</h1>
+      <h1>Shoppinglist</h1>
       <ol>
         <todo-item
           v-for="item in groceryList"
@@ -56,13 +56,18 @@
       </button>
 
       <a v-bind:href="urlLink" target="_blank">svt.se</a>
-
+      <p>
+        <h3>Add two numbers</h3>
+        <input type="number" id="inputNumber1" v-model="calc1" />
+        <input type="number" id="inputNumber1" v-model="calc2" />
+        <h3>The sum is: {{ Number(calc1) + Number(+calc2) }}</h3>
+      </p>
       <p>
         <button v-on:click="freezeIt">Freeze future changes!</button>
       </p>
       {{ freezeMsg }}
     </div>
-    <script src="https://unpkg.com/vue@2.6.6/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

@@ -25,13 +25,15 @@ var app = new Vue({
       { id: 13, text: "Sill", itemshow: true }
     ],
     message: "Hello world",
-    freezeMsg: "Inget kallt här",
+    freezeMsg: "Nothing is froozen",
     rawHtml: "<b>bold text</b>",
     redtext: "color-red",
     btnIsDisabled: false,
     urlLink: "https://www.svt.se",
     newItem: "",
-    filterText: ""
+    filterText: "",
+    calc1: 1,
+    calc2: 1,
   },
   methods: {
     reverseMe: function() {
@@ -41,7 +43,7 @@ var app = new Vue({
         .join("");
     },
     freezeIt: function() {
-      this.freezeMsg = "Nu är det kallt!!";
+      this.freezeMsg = "Now it is frozen and further changes wont be possible!!";
     },
     disableBtn: function(msg) {
       this.btnIsDisabled = true;
