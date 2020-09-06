@@ -7,5 +7,5 @@ The parts that is included is:
 - button on click function
 - bind a css class
 - a simple link
-- freeze further changes
+- how to freeze further updates to page
  
