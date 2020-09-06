@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title> </title>
+    <style type="text/css">
+      .color-red {
+        color: red;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>Inköpslista</h1>
+      <ol>
+        <todo-item
+          v-for="item in groceryList"
+          v-if="item.itemshow"
+          v-bind:todo="item"
+          v-bind:key="item.id"
+        ></todo-item>
+      </ol>
+
+      <input v-model="newItem" />
+
+      <button v-on:click="addNew">
+        Add new
+      </button>
+
+      <p>
+        Filter:
+        <input v-model="filterText" placeholder="Enter filter text" v-on:keyup="filterList" />
+
+        <button v-on:click="clearFilterList">
+          Clear filter
+        </button>
+      </p>
+
+      <!---->
+      <h1>Playground</h1>
+      <input v-model="message" />
+      <button v-on:click="reverseMe">Reverse Message</button>
+      <p>{{ message }}</p>
+
+      <p>Moustaches outputs only text: {{ rawHtml }}</p>
+      <p>using v-html outputs correct: <span v-html="rawHtml"></span></p>
+
+      <div v-bind:class="redtext">
+        HELLO binding a css class with a vue attribute
+      </div>
+
+      <button v-bind:disabled="btnIsDisabled" v-on:click="disableBtn">
+        Disable me!
+      </button>
+
+      <a v-bind:href="urlLink" target="_blank">svt.se</a>
+
+      <p>
+        <button v-on:click="freezeIt">Freeze future changes!</button>
+      </p>
+      {{ freezeMsg }}
+    </div>
+    <script src="https://unpkg.com/vue@2.6.6/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
