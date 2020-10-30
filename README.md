@@ -1,5 +1,5 @@
 Vue-playground1 is created to show how easy it is to integrate vue.js in a current page.
-I have not made a npm setup but linked the Vue library.  
+I have not made a npm setup but linked the Vue library. No styling has been made, focus is on the logic. 
 The parts that is included is:
 - a simple shopping-list with filter and add/remove items
 - show how to work with strings
